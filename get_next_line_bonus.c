@@ -6,7 +6,7 @@
 /*   By: asobolev <asobolev@student.42istanbul.com.t+#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 07:01:11 by asobolev          #+#    #+#             */
-/*   Updated: 2026/05/19 00:41:08 by asobolev         ###   ########.fr       */
+/*   Updated: 2026/05/19 01:34:59 by asobolev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,10 @@ static char	*read_until_line(int fd, char *buff, char **storage)
 			return (NULL);
 		}
 		if (ft_strchr(*storage, '\n'))
+		{
+			free(buff);
 			return (extract_line(storage));
+		}
 	}
 }
 
