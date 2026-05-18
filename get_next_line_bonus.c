@@ -6,7 +6,7 @@
 /*   By: asobolev <asobolev@student.42istanbul.com.t+#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 07:01:11 by asobolev          #+#    #+#             */
-/*   Updated: 2026/05/18 07:06:27 by asobolev         ###   ########.fr       */
+/*   Updated: 2026/05/18 21:59:37 by asobolev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ char	*get_next_line(int fd)
 {
 	char		*buff;
 	int			readed;
-	static char	*storage[19876543];
+	static char	*storage[1048576];
 
 	if ((fd < 0) || BUFFER_SIZE < 1)
 		return (NULL);

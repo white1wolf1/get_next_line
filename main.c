@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asobolev <asobolev@student.42istanbul.com.t+#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/29 13:02:41 by asobolev          #+#    #+#             */
-/*   Updated: 2026/05/18 23:00:03 by asobolev         ###   ########.fr       */
+/*   Created: 2026/05/18 21:53:53 by asobolev          #+#    #+#             */
+/*   Updated: 2026/05/18 22:59:47 by asobolev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "get_next_line.h"
+#include <fcntl.h>
+#include <stdio.h>
 
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 1
-# endif
-
-# include <unistd.h>
-# include <stdlib.h>
-
-char	*ft_substr(char const *s, unsigned int start, size_t len);
-char	*get_next_line(int fd);
-char	*ft_strdup(const char *s);
-size_t	ft_strlen(const char *s);
-char	*ft_strchr(const char *s, int c);
-char	*ft_strjoin(char const *s1, char const *s2);
-
-#endif
+int main(void)
+{
+	int cd = open("README.md",O_RDONLY);
+	char *str;
+	while ((str=get_next_line(0),str))
+		printf("%s", str), free(str);
+	return 0;
+}
