@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: asobolev <asobolev@student.42istanbul.com.t+#+  +:+       +#+        */
+/*   By: asobolev <asobolev@student.42istabul.com.t +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 13:02:41 by asobolev          #+#    #+#             */
-/*   Updated: 2026/05/17 03:30:50 by asobolev         ###   ########.fr       */
+/*   Updated: 2026/05/18 21:43:27 by asobolev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,10 @@
 # define GET_NEXT_LINE_H
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 3
+#  define BUFFER_SIZE 1
 # endif
 
 # include <unistd.h>
-# include <fcntl.h>
 # include <stdlib.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len);
