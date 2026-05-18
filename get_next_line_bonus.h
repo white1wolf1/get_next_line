@@ -6,7 +6,7 @@
 /*   By: asobolev <asobolev@student.42istanbul.com.t+#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 07:01:11 by asobolev          #+#    #+#             */
-/*   Updated: 2026/05/18 22:07:47 by asobolev         ###   ########.fr       */
+/*   Updated: 2026/05/19 00:12:52 by asobolev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,10 @@
 # define GET_NEXT_LINE_BONUS_H
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 
+#  define BUFFER_SIZE 42
 # endif
 
 # include <unistd.h>
-# include <fcntl.h>
 # include <stdlib.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len);

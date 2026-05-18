@@ -6,7 +6,7 @@
 /*   By: asobolev <asobolev@student.42istanbul.com.t+#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 13:02:29 by asobolev          #+#    #+#             */
-/*   Updated: 2026/05/17 03:32:33 by asobolev         ###   ########.fr       */
+/*   Updated: 2026/05/19 00:35:33 by asobolev         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,11 @@
 
 size_t	ft_strlen(const char *s)
 {
-	const char	*p = s;
+	const char	*p;
 
+	if (!s)
+		return (0);
+	p = s;
 	while (*p++)
 		;
 	return (p - s - 1);
@@ -26,6 +29,8 @@ char	*ft_strdup(const char *s)
 	char	*start;
 	char	*ptr;
 
+	if (!s)
+		return (NULL);
 	ptr = malloc(ft_strlen(s) + 1);
 	if (!ptr)
 		return (NULL);
@@ -42,8 +47,8 @@ char	*ft_strdup(const char *s)
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t		i;
-	char		*a;
+	size_t	i;
+	char	*a;
 
 	if (!s)
 		return (NULL);
@@ -66,6 +71,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 char	*ft_strchr(const char *s, int c)
 {
+	if (!s)
+		return (NULL);
 	while (*s)
 	{
 		if ((unsigned char)*s == (unsigned char)c)
@@ -83,7 +90,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	len;
 	char	*start;
 
-	ptr = 0;
+	if (!s1 || !s2)
+		return (NULL);
 	len = (ft_strlen(s1) + ft_strlen(s2)) + 1;
 	ptr = malloc(len);
 	if (!ptr)
