@@ -11,11 +11,19 @@ satır dahil). Proje 42 müfredatına göre hazırlanmıştır.
 
 ## İçerik
 
+### Temel Dosyalar
 - get_next_line.c
 - get_next_line_utils.c
 - get_next_line.h
 
+### Bonus Dosyalar
+- get_next_line_bonus.c
+- get_next_line_utils_bonus.c
+- get_next_line_bonus.h
+
 ## Kurulum & Derleme
+
+### Temel Sürüm
 
 Geliştirme ortamında standart GCC ile derlemek için örnek komut:
 
@@ -24,6 +32,14 @@ gcc -D BUFFER_SIZE=32 -Wall -Wextra -Werror -I. get_next_line.c get_next_line_ut
 ```
 
 `BUFFER_SIZE` makrosunu ihtiyaca göre değiştirin (örnekte 32).
+
+### Bonus Sürüm
+
+Bonus dosyalarını derlemek için:
+
+```bash
+gcc -D BUFFER_SIZE=32 -Wall -Wextra -Werror -I. get_next_line_bonus.c get_next_line_utils_bonus.c -o gnl_bonus_test
+```
 
 ## Kullanım
 

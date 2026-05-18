@@ -81,18 +81,18 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*ptr;
 	size_t	len;
-	char	*strart;
+	char	*start;
 
 	ptr = 0;
 	len = (ft_strlen(s1) + ft_strlen(s2)) + 1;
 	ptr = malloc(len);
 	if (!ptr)
 		return (NULL);
-	strart = ptr;
+	start = ptr;
 	while (*s1)
 		*ptr++ = *s1++;
 	while (*s2)
 		*ptr++ = *s2++;
 	*ptr = '\0';
-	return (strart);
+	return (start);
 }
